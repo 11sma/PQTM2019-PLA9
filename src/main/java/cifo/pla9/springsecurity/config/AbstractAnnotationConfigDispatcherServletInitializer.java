@@ -1,0 +1,21 @@
+package cifo.pla9.springsecurity.config;
+
+public class AbstractAnnotationConfigDispatcherServletInitializer
+		extends org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer {
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		return null;
+	}
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		return new Class[] {AppConfig.class};
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		return new String[] {"/"};
+	}
+
+}
