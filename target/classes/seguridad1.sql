@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `seguridad` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `seguridad`;
+CREATE DATABASE  IF NOT EXISTS `seguridad1` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `seguridad1`;
 -- MySQL dump 10.16  Distrib 10.1.37-MariaDB, for Win32 (AMD64)
 --
 -- Host: 127.0.0.1    Database: seguridad
@@ -38,7 +38,7 @@ CREATE TABLE `authorities` (
 
 LOCK TABLES `authorities` WRITE;
 /*!40000 ALTER TABLE `authorities` DISABLE KEYS */;
-INSERT INTO `authorities` VALUES ('ana','ROLE_EMPLEADO'),('eva','ROLE_EMPLEADO'),('eva','ROLE_GERENTE'),('pep','ROLE_ADMIN'),('pep','ROLE_EMPLEADO');
+INSERT INTO `authorities` VALUES ('ana','ROLE_COLABORADOR'),('eva','ROLE_EDITOR'),('pep','ROLE_ADMIN');
 /*!40000 ALTER TABLE `authorities` ENABLE KEYS */;
 UNLOCK TABLES;
 

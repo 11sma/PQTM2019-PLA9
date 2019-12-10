@@ -20,13 +20,19 @@
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Gerentes</h1>
-	<h3>Esta página será sólo para gerentes</h3>
+	<nav class="navbar navbar-light" style="background-color: #ffbd59;">
+	  <a class="navbar-brand" href="#">
+	    <img src="https://lleure.cat/wp-content/uploads/2019/11/lleure.cat-logoweb-nocolor.png" height="30" class="d-inline-block align-top" alt="">
+	    lleure.cat
+	  </a>
+	  <form:form action="${pageContext.request.contextPath}/logout" method="POST">
+	 	<a href="javascript:;" onclick="parentNode.submit();" class="btn btn-dark">Logout</a>
+	  </form:form>
+	</nav>
+	<h1>Colaboradores</h1>
+	<h3>Esta página será sólo para colaboradores</h3>
 	<p>Usuario: <sec:authentication property="principal.username"/></p>
 	<p>Roles: <sec:authentication property="principal.authorities"/></p>
 	
-	<form:form action="${pageContext.request.contextPath}/logout" method="POST">
-		<button type="submit"class="btn btn-warning">Salir</button>
-	</form:form>
 </body>
 </html>

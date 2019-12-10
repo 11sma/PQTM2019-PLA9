@@ -24,6 +24,12 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<nav class="navbar navbar-light" style="background-color: #ffbd59;">
+	  <a class="navbar-brand" href="#">
+	    <img src="https://lleure.cat/wp-content/uploads/2019/11/lleure.cat-logoweb-nocolor.png" height="30" class="d-inline-block align-top" alt="">
+	    lleure.cat
+	  </a>
+	</nav>
 	<div class="container">
 		<h2>Login</h2>
 		

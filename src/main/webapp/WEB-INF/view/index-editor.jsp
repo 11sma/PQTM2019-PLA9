@@ -29,10 +29,10 @@
 	 	<a href="javascript:;" onclick="parentNode.submit();" class="btn btn-dark">Logout</a>
 	  </form:form>
 	</nav>
-	<h1 class="text-danger">Acceso denegado</h1>
-	<p>Usuario:<sec:authentication property="principal.username"/></p>
-	<p>Roles:<sec:authentication property="principal.authorities"/></p>
-	<a href="${pageContext.request.contextPath}/auth"class="btn btn-outline-primary">Volver al inicio</a>
+	<h1>Editores</h1>
+	<h3>Esta página será sólo para editores</h3>
+	<p>Usuario: <sec:authentication property="principal.username"/></p>
+	<p>Roles: <sec:authentication property="principal.authorities"/></p>
 	
 </body>
 </html>

@@ -20,20 +20,47 @@
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Hola que tal</h1>
-	<p>Usuario: <sec:authentication property="principal.username"/></p>
-	<p>Roles: <sec:authentication property="principal.authorities"/></p>
+<!-- Image and text -->
+	<nav class="navbar navbar-light" style="background-color: #ffbd59;">
+	  <a class="navbar-brand" href="#">
+	    <img src="https://lleure.cat/wp-content/uploads/2019/11/lleure.cat-logoweb-nocolor.png" height="30" class="d-inline-block align-top" alt="">
+	    lleure.cat
+	  </a>
+	  <a href="${pageContext.request.contextPath}/auth/" class="btn btn-primary">Login</a>
+	</nav>
+	<div class="jumbotron">
+	  <h1 class="display-4">Blog!</h1>
+	  <p class="lead">Esta es la página principal del blog, en ella podrás ver una serie de fotos en un carrusel bootstrap</p>
+	  <hr class="my-4">
+	  <p>Podrás estar al día de todas las novedades.</p>
+	</div>
 	
-	<sec:authorize access="hasRole('GERENTE')">
-		<a href="${pageContext.request.contextPath}/gerente/" class="btn btn-outline-primary">Área Gerencia</a>
-	</sec:authorize>
-	<sec:authorize access="hasRole('ADMIN')">
-		<a href="${pageContext.request.contextPath}/admin/" class="btn btn-outline-primary">Área Administración</a>
-	</sec:authorize>
-	
-	<form:form action="${pageContext.request.contextPath}/logout" method="POST">
-		<button type="submit" class="btn btn-warning">Salir</button>
-	</form:form>
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://image.shutterstock.com/image-photo/fishing-boat-fisherman-ocean-dawn-600w-120522421.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/India_Gate_600x400.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://picography.co/wp-content/uploads/2018/10/picography-fishing-boats-dock-lake-river-water-moor-sm-2-768x515.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 	
 </body>
 </html>

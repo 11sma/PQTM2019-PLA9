@@ -24,11 +24,13 @@ public class SeguridadConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/").hasRole("EMPLEADO")
-			.antMatchers("/gerente/**").hasRole("GERENTE")
+			.antMatchers("/").permitAll()
+			.antMatchers("/auth/**").authenticated()
+			.antMatchers("/colaborador/**").hasRole("COLABORADOR")
+			.antMatchers("/editor/**").hasRole("EDITOR")
 			.antMatchers("/admin/**").hasRole("ADMIN")
 		.and().formLogin().loginPage("/formlogin").loginProcessingUrl("/authenticateTheUser").permitAll()
-		.and().logout().permitAll()
+		.and().logout().logoutSuccessUrl("/").permitAll()
 		.and().exceptionHandling().accessDeniedPage("/prohibido")
 		;
 	}
